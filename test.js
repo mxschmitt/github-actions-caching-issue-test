@@ -6,5 +6,6 @@ const playwright = require('playwright-chromium');
   const page = await context.newPage();
   await page.goto('http://whatsmyuseragent.org/');
   await page.screenshot({ path: `example.png` });
+  console.log(await page.content())
   await browser.close();
 })();
